@@ -1,0 +1,28 @@
+<div style="margin-top: 100px;"></div>
+
+<div id="erp-frame-wrap" style="padding-right:20px; padding-left: 20px;">
+  <div class="frame-cont">
+    <div class="frame-cont-table">
+      <div style="padding-bottom: 10px;">Tour Packages List</div>
+
+      <table class="table-type01" cellpadding="0" cellspacing="0">
+        <tr>
+          <th style="width: 20%;">Tour Image</th>
+          <th style="width: 35%;">Tour Title</th>
+          <th style="width: 25%;">Price</th>
+          <th style="width: 20%;">Register Date</th>
+        </tr>
+        <tr *ngFor="let tp of tourProducts">
+          <td style="text-align: center;"><img src="{{tp.imgSrc}}" width="111" height="97"></td>
+          <td>
+            <a class="resnum blue" href="#" [routerLink]="['/tourProductDetail', tp.pIdx]">{{tp.tourTitle}}</a>
+          </td>
+          <td style="text-align: center;">Adult - ${{tp.adultPrice}} / Child - ${{tp.childPrice}}</td>
+          <td style="text-align: center;">{{tp.registerDate}}</td>
+        </tr>
+      </table>
+      <div style="padding-top: 20px; text-align: right;"><button type="button" (click)="register()" class="admbtn btn-mid btn-blue" style="display: inline; width: 150px;">Register</button></div>
+      
+    </div>
+  </div>
+</div>

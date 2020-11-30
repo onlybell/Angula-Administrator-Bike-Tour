@@ -1,0 +1,36 @@
+<div id="erp-wrap" *ngIf="logoutbtn">
+    <div id="erp-header">
+        <div class="erp-logo">
+            <div class="erp-logo">
+                <a href="#">
+                    <img src="assets/images/bt_logo.png" width="68" height="58">
+                </a>
+            </div>
+            
+        </div>
+        <div class="erp-header-group">
+            <div class="erp-topbar"></div>
+            <div class="erp-navbar">
+                <ul>
+                    <li id="erp_nav01">
+                        <a href="/dashboard"><span>Manage Booking</span></a>
+                    </li>
+                    <li id="erp_nav02">
+                        <a href="/tourProducts"><span>Tour Packages</span></a>
+                    </li>
+                    <li id="erp_nav03">
+                        <a href="/contactUs"><span>Contact Us</span></a>
+                    </li>
+                    <li id="erp_nav04">
+                        <a href="/member"><span>Member Management</span></a>
+                    </li>
+                    <li id="erp_nav05">
+                        <a href="#" (click)="logout()"><span>Logout</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
